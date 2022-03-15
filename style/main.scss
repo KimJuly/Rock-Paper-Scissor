@@ -1,0 +1,205 @@
+$primary-color: orange;
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  font-size: 14px;
+  user-select: none;
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: gray;
+  width: 100%;
+  height: 100vh;
+}
+
+#start-screen {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  .btn-start {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-weight: 500;
+    color: $primary-color;
+    background-color: white;
+    animation: glow 1s infinite ;
+    transition: 0.5s;
+  }
+  .btn-start:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+  .title {
+    color: $primary-color;
+    text-align: center;
+    margin: 0;
+    padding: 50px 0;
+    text-transform: uppercase;
+  }
+  .message {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .img-option {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    padding: 20px;
+    border: 5px solid $primary-color;
+    margin: 20px;
+    background-color: white;
+  }
+  .choices {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    .player-option {
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  #result-screen {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; 
+    .name {
+      text-align: center;
+      color: white;
+    }
+  }
+  
+}
+
+#btn-next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 100px 200px;
+  button {
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 15px 65px;
+    margin: 0;
+    box-shadow: 0 2px 5px 0 rgba(3,6,26,0.15);
+    transition: .3s all ease-in-out;
+    background-color: $primary-color;
+    &:hover {
+      cursor: pointer;
+      background: white;
+      color: $primary-color;
+      animation: none;
+      border: 2px solid $primary-color;
+    }
+    animation: wiggle 2s infinite;
+  }
+}
+
+@keyframes glow{
+  0%{
+  box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);}
+  50%{
+  box-shadow: 5px 5px 20px rgb(81, 224, 210),-5px -5px 20px rgb(81, 224, 210)
+  }
+  100%{
+  box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168)
+  }
+}
+
+@keyframes wiggle {
+	5%,
+	50% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(0.9);
+	}
+	15% {
+		transform: scale(1.15);
+	}
+	20% {
+		transform: scale(1.15) rotate(-5deg);
+	}
+	25% {
+		transform: scale(1.15) rotate(5deg);
+	}
+	30% {
+		transform: scale(1.15) rotate(-3deg);
+	}
+	35% {
+		transform: scale(1.15) rotate(2deg);
+	}
+	40% {
+		transform: scale(1.15) rotate(0);
+	}
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    .img-option {
+      height: 150px;
+      width: 150px;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+  #btn-next {
+    padding: 85px 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    .img-option {
+      height: 120px;
+      width: 120px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .wrapper {
+    .img-option {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  #btn-next {
+    padding: 75px;
+    button { 
+      padding: 12px 50px;
+    }
+  }
+}
+@media screen and (max-width: 485px) {
+  .wrapper {
+    .img-option {
+      height: 70px;
+      width: 70px;
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+}                                     

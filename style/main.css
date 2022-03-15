@@ -1,0 +1,289 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: gray;
+  width: 100%;
+  height: 100vh;
+}
+
+#start-screen {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#start-screen .btn-start {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: none;
+  font-weight: 500;
+  color: orange;
+  background-color: white;
+  -webkit-animation: glow 1s infinite;
+          animation: glow 1s infinite;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#start-screen .btn-start:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.wrapper .title {
+  color: orange;
+  text-align: center;
+  margin: 0;
+  padding: 50px 0;
+  text-transform: uppercase;
+}
+
+.wrapper .message {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.wrapper .img-option {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  padding: 20px;
+  border: 5px solid orange;
+  margin: 20px;
+  background-color: white;
+}
+
+.wrapper .choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0;
+}
+
+.wrapper .choices .player-option {
+  cursor: pointer;
+}
+
+.wrapper .choices .player-option:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.wrapper #result-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.wrapper #result-screen .name {
+  text-align: center;
+  color: white;
+}
+
+#btn-next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 100px 200px;
+}
+
+#btn-next button {
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid white;
+  border-radius: 100px;
+  padding: 15px 65px;
+  margin: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
+          box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  background-color: orange;
+  -webkit-animation: wiggle 2s infinite;
+          animation: wiggle 2s infinite;
+}
+
+#btn-next button:hover {
+  cursor: pointer;
+  background: white;
+  color: orange;
+  -webkit-animation: none;
+          animation: none;
+  border: 2px solid orange;
+}
+
+@-webkit-keyframes glow {
+  0% {
+    -webkit-box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+            box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+  }
+  50% {
+    -webkit-box-shadow: 5px 5px 20px #51e0d2, -5px -5px 20px #51e0d2;
+            box-shadow: 5px 5px 20px #51e0d2, -5px -5px 20px #51e0d2;
+  }
+  100% {
+    -webkit-box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+            box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+  }
+}
+
+@keyframes glow {
+  0% {
+    -webkit-box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+            box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+  }
+  50% {
+    -webkit-box-shadow: 5px 5px 20px #51e0d2, -5px -5px 20px #51e0d2;
+            box-shadow: 5px 5px 20px #51e0d2, -5px -5px 20px #51e0d2;
+  }
+  100% {
+    -webkit-box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+            box-shadow: 5px 5px 20px #5d34a8, -5px -5px 20px #5d34a8;
+  }
+}
+
+@-webkit-keyframes wiggle {
+  5%,
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  15% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  20% {
+    -webkit-transform: scale(1.15) rotate(-5deg);
+            transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    -webkit-transform: scale(1.15) rotate(5deg);
+            transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    -webkit-transform: scale(1.15) rotate(-3deg);
+            transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    -webkit-transform: scale(1.15) rotate(2deg);
+            transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: scale(1.15) rotate(0);
+            transform: scale(1.15) rotate(0);
+  }
+}
+
+@keyframes wiggle {
+  5%,
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  15% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  20% {
+    -webkit-transform: scale(1.15) rotate(-5deg);
+            transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    -webkit-transform: scale(1.15) rotate(5deg);
+            transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    -webkit-transform: scale(1.15) rotate(-3deg);
+            transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    -webkit-transform: scale(1.15) rotate(2deg);
+            transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: scale(1.15) rotate(0);
+            transform: scale(1.15) rotate(0);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper .img-option {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+  }
+  #btn-next {
+    padding: 85px 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .img-option {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper .img-option {
+    height: 100px;
+    width: 100px;
+  }
+  #btn-next {
+    padding: 75px;
+  }
+  #btn-next button {
+    padding: 12px 50px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .wrapper .img-option {
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    margin: 5px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

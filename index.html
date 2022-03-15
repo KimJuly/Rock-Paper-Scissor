@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Rock Paper Scissor</title>
+      <link rel="stylesheet" href="./style/main.css">
+      <link rel="icon" href="./images/logo.jpg" type="image/jpg" sizes="16x16">
+</head>
+<body>
+      <div class="wrapper">
+            <h1 class="title">Rock Paper Scissor</h1>
+            <h2 class="message"></h2>
+            <div id="start-screen">
+                  <input type="button" value="Start" id="start" class="btn-start" onclick="start()">
+            </div>
+            <div class="choices" id="choice-screen" style="display:none">
+                  <div class="player-option " data-option="rock" data-choice="0">
+                        <img src="./images/1.png" alt="rock" class="img-option">
+                  </div>
+                  <div class="player-option" data-option="scissors" data-choice="1">
+                        <img src="./images/2.png" alt="scissors" class="img-option">
+                  </div>
+                  <div class="player-option" data-option="paper" data-choice="2">
+                        <img src="./images/3.png" alt="paper" class="img-option">
+                  </div>
+            </div>
+            <div id="result-screen" style="display: none;">
+                  <div>
+                        <h2 class="name">Computer</h2>
+                        <div class="computer-option"></div>
+                  </div>
+                  <div>
+                        <h2 class="name">User</h2>
+                        <div class="user-option"></div>
+                  </div>
+            </div>
+      </div>
+      <div id="btn-next" style="display: none;">
+            <button class="button-wiggle">Retry</button>
+      </div>
+</body>
+      <script src="./js/index.js"></script>
+</html>
